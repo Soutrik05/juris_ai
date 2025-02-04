@@ -48,7 +48,7 @@ def generate_answer(query, context):
 def process_query(query, index, chunks):
     try:
         # Retrieve top-k chunks
-        top_chunks = retrieve_top_chunks(query, index, chunks, k=3)
+        top_chunks = retrieve_top_chunks(query, index, chunks, k=5)
         context = "\n\n".join(top_chunks)
         # Generate answer
         answer = generate_answer(query, context)
