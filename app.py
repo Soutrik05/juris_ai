@@ -52,7 +52,7 @@ def process_query(query, index, chunks):
         context = "\n\n".join(top_chunks)
         # Generate answer
         answer = generate_answer(query, context)
-        return answer, "\n".join(top_chunks)
+        return answer,top_chunks
     except Exception as e:
         return "Error processing query.", str(e)
 
